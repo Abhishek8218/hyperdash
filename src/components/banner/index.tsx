@@ -14,7 +14,7 @@ export const Banner  = () => {
 
    
     
-      <div className="flex space-x-4">
+      <div className="flex max-sm:flex-col space-x-4">
         <button className="bg-white  text-black hover:border hover:border-white hover:bg-transparent cursor-pointer hover:text-white transition-all duration-300 ease-in-out px-11.5 py-3  font-semibold text-nowrap">
           Order Now
         </button>

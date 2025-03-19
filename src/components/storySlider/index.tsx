@@ -10,22 +10,22 @@ const cardData = [
   {
     title: 'Lorem Ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: '/story/story 1 Img.png', 
+    imageUrl: '/story/Story 1 Img.png', 
   },
   {
     title: 'Lorem Ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: '/story/story 2 Img.png',
+    imageUrl: '/story/Story 2 Img.png',
   },
   {
     title: 'Lorem Ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: '/story/story 3 Img.png',
+    imageUrl: '/story/Story 3 Img.png',
   },
   {
     title: 'Lorem Ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: '/story/story 4 Img.png',
+    imageUrl: '/story/Story 4 Img.png',
   },
 ];
 

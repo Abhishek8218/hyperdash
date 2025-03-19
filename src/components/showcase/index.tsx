@@ -39,7 +39,7 @@ export const Showcase = () => {
             Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
           </p>
           
-          <div className="flex space-x-4">
+          <div className="flex max-sm:flex-col space-x-4">
             <button className="bg-white text-black hover:border hover:border-white hover:bg-transparent cursor-pointer hover:text-white transition-all duration-300 ease-in-out px-11.5 py-3  font-semibold text-nowrap">
               Order Now
             </button>
@@ -75,7 +75,7 @@ export const Showcase = () => {
        
         
         
-          <div className="flex space-x-4">
+          <div className="flex max-sm:flex-col space-x-4">
             <button className="bg-black text-white border hover:border-black hover:bg-white hover:text-black transition-all ease-in-out duration-300 cursor-pointer px-11.5 py-3  font-semibold text-nowrap">
               Order Now
             </button>
