@@ -5,10 +5,10 @@ import Image from 'next/image';
 import React, { useState } from 'react';
 
 export const Navbar = () => {
-  // State for controlling the mobile menu visibility
+ 
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
-  // Function to toggle mobile menu visibility
+ 
   const toggleMobileMenu = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
@@ -32,6 +32,7 @@ export const Navbar = () => {
         <div className='hidden md:flex gap-5.5'>
           <a href='#' className='hover:text-gray-400 transition-colors'>Shop</a>
           <a href='#' className='hover:text-gray-400 transition-colors'>Account</a>
+          <button className='rounded-md font-semibold'><Menu size={24} /></button>
         </div>
 
         {/* Mobile Menu Icon */}

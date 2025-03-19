@@ -2,15 +2,15 @@
 
 import React from 'react';
 import Slider from 'react-slick';
-import Image from 'next/image'; // if you are using Next.js
+import Image from 'next/image';
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-// Sample data for dynamic cards
+
 const cardData = [
   {
     title: 'Lorem Ipsum',
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: '/story/story 1 Img.png', // Replace with actual image URL
+    imageUrl: '/story/story 1 Img.png', 
   },
   {
     title: 'Lorem Ipsum',
@@ -30,7 +30,7 @@ const cardData = [
 ];
 
 export const StorySlider = () => {
-  // Slider settings to match the design
+
   const settings = {
     dots: false,
     infinite: true,
@@ -56,7 +56,7 @@ export const StorySlider = () => {
   };
 
   return (
-    <div className="bg-black p-8 md:pl-36">
+    <div className="bg-black p-8 md:pl-[8rem]">
         <div>
       <h2 className="text-white text-3xl font-light mb-8">Our Stories</h2>
 <div>
@@ -71,10 +71,10 @@ export const StorySlider = () => {
                 src={card.imageUrl}
                 alt={card.title}
                 width={320}
-                height={300}
-                className="w-[320] h-[300px] object-cover"
+                height={330}
+                className="w-[320] h-[330px] object-cover"
               />
-              <div className="p-4 text-start">
+              <div className="py-4  text-start">
                 <h3 className="text-xl font-semibold">{card.title}</h3>
                 <p className="text-white mt-2">{card.description}</p>
               </div>
@@ -96,7 +96,7 @@ const SampleNextArrow = (props:ArrowProps) => {
     const { className, style, onClick } = props;
     return (
         <div
-            className={`${className} bg-white !text-4xl rounded-full block left-[80vw] md:left-[75vw] !top-[-70px]  p-2`}
+            className={`${className} bg-white !text-4xl rounded-full block  left-[75vw] md:left-[75vw] !top-[-70px]  p-2`}
             style={{ ...style }}
             onClick={onClick}
         >
@@ -109,7 +109,7 @@ const SamplePrevArrow = (props:ArrowProps) => {
   const { className, style, onClick } = props;
   return (
     <div
-    className={`${className} bg-white !text-4xl rounded-full block !left-[70vw] !top-[-70px]  p-2`}
+    className={`${className} bg-white !text-4xl rounded-full block !left-[65vw] md:!left-[70vw] !top-[-70px]  p-2`}
     style={{ ...style }}
       onClick={onClick}
     >
