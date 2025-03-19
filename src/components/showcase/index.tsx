@@ -40,17 +40,17 @@ export const Showcase = () => {
           </p>
           
           <div className="flex space-x-4">
-            <button className="bg-white text-black px-11.5 py-3  font-semibold text-nowrap">
+            <button className="bg-white text-black hover:border hover:border-white hover:bg-transparent cursor-pointer hover:text-white transition-all duration-300 ease-in-out px-11.5 py-3  font-semibold text-nowrap">
               Order Now
             </button>
-            <button className=" text-white px-11.5 py-3  font-semibold text-nowrap">
+            <button className=" text-white px-11.5 py-3 hover:border hover:border-white transition-all duration-300 ease-in-out  font-semibold text-nowrap">
               Learn More
             </button>
           </div>
         </div>
 
     
-        <div className="relative w-full lg:w-1/3 h-[500px]">
+        <div className="relative w-full lg:w-1/3 h-[500px]"> 
           <Image
             src="/showcase2.png" // Add the Lexo Z car image to the public folder and rename
             alt="Lexo Z Car"
@@ -76,10 +76,10 @@ export const Showcase = () => {
         
         
           <div className="flex space-x-4">
-            <button className="bg-black text-white px-11.5 py-3  font-semibold text-nowrap">
+            <button className="bg-black text-white border hover:border-black hover:bg-white hover:text-black transition-all ease-in-out duration-300 cursor-pointer px-11.5 py-3  font-semibold text-nowrap">
               Order Now
             </button>
-            <button className=" text-black px-11.5 py-3  font-semibold text-nowrap">
+            <button className=" text-black hover:border hover:border-black  hover:text-black transition-all ease-in-out duration-300 cursor-pointer  px-11.5 py-3  font-semibold text-nowrap">
               Learn More
             </button>
           </div>

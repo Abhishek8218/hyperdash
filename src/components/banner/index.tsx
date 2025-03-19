@@ -15,10 +15,10 @@ export const Banner  = () => {
    
     
       <div className="flex space-x-4">
-        <button className="bg-white  text-black px-11.5 py-3  font-semibold text-nowrap">
+        <button className="bg-white  text-black hover:border hover:border-white hover:bg-transparent cursor-pointer hover:text-white transition-all duration-300 ease-in-out px-11.5 py-3  font-semibold text-nowrap">
           Order Now
         </button>
-        <button className=" text-white px-11.5 py-3 rounded-md font-semibold text-nowrap">
+        <button className=" text-white   hover:border hover:border-white transition-all duration-300 ease-in-out  px-11.5 py-3 font-semibold text-nowrap">
           Learn More
         </button>
       </div>

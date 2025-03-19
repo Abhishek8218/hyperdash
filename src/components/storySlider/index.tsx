@@ -96,7 +96,7 @@ const SampleNextArrow = (props:ArrowProps) => {
     const { className, style, onClick } = props;
     return (
         <div
-            className={`${className} bg-white !text-4xl rounded-full block  left-[75vw] md:left-[75vw] !top-[-70px]  p-2`}
+            className={`${className} bg-white !text-4xl rounded-full block  left-[75vw] md:left-[75vw] !top-[-70px] cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out p-2`}
             style={{ ...style }}
             onClick={onClick}
         >
@@ -109,7 +109,7 @@ const SamplePrevArrow = (props:ArrowProps) => {
   const { className, style, onClick } = props;
   return (
     <div
-    className={`${className} bg-white !text-4xl rounded-full block !left-[65vw] md:!left-[70vw] !top-[-70px]  p-2`}
+    className={`${className} bg-white !text-4xl rounded-full block !left-[65vw] md:!left-[70vw] !top-[-70px] cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out  p-2`}
     style={{ ...style }}
       onClick={onClick}
     >
