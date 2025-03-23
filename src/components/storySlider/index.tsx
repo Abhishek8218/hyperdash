@@ -122,30 +122,28 @@ interface ArrowProps {
 const SampleNextArrow = (props: ArrowProps) => {
   const { className, style, onClick } = props
   return (
-    <motion.div
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.9 }}
-      className={`${className} bg-white !text-4xl rounded-full block left-[75vw] md:left-[75vw] !top-[-70px] cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out p-2`}
+    <div
+    
+      className={`${className} bg-white !text-4xl rounded-full block left-[75vw] md:left-[75vw] !top-[-70px] cursor-pointer hover:scale-125 transition-all duration-300 ease-in-out p-2`}
       style={{ ...style }}
       onClick={onClick}
     >
       <span className="text-white">→</span>
-    </motion.div>
+    </div>
   )
 }
 
 const SamplePrevArrow = (props: ArrowProps) => {
   const { className, style, onClick } = props
   return (
-    <motion.div
-      whileHover={{ scale: 1.2 }}
-      whileTap={{ scale: 0.9 }}
-      className={`${className} bg-white !text-4xl rounded-full block !left-[65vw] md:!left-[70vw] !top-[-70px] cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out p-2`}
+    <div
+     
+      className={`${className} bg-white !text-4xl rounded-full block !left-[65vw] md:!left-[70vw] !top-[-70px] cursor-pointer hover:scale-125 transition-all duration-300 ease-in-out p-2`}
       style={{ ...style }}
       onClick={onClick}
     >
       <span className="text-white">←</span>
-    </motion.div>
+    </div>
   )
 }
 
