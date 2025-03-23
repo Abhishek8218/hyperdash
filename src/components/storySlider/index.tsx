@@ -1,36 +1,40 @@
-'use client'
+"use client"
 
-import React from 'react';
-import Slider from 'react-slick';
-import Image from 'next/image';
-import "slick-carousel/slick/slick.css";
-import "slick-carousel/slick/slick-theme.css";
+import type React from "react"
+import Slider from "react-slick"
+import Image from "next/image"
+import { motion } from "framer-motion"
+import "slick-carousel/slick/slick.css"
+import "slick-carousel/slick/slick-theme.css"
 
 const cardData = [
   {
-    title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: '/story/Story 1 Img.png', 
+    title: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    imageUrl: "/story/Story 1 Img.png",
   },
   {
-    title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: '/story/Story 2 Img.png',
+    title: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    imageUrl: "/story/Story 2 Img.png",
   },
   {
-    title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: '/story/Story 3 Img.png',
+    title: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    imageUrl: "/story/Story 3 Img.png",
   },
   {
-    title: 'Lorem Ipsum',
-    description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.',
-    imageUrl: '/story/Story 4 Img.png',
+    title: "Lorem Ipsum",
+    description:
+      "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+    imageUrl: "/story/Story 4 Img.png",
   },
-];
+]
 
 export const StorySlider = () => {
-
   const settings = {
     dots: false,
     infinite: true,
@@ -53,68 +57,95 @@ export const StorySlider = () => {
         },
       },
     ],
-  };
+  }
 
   return (
-    <div className="bg-black p-8 md:pl-[8rem]">
-        <div>
-      <h2 className="text-white text-3xl font-light mb-8">Our Stories</h2>
-<div>
-
-</div>
-        </div>
+    <motion.div
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      transition={{ duration: 0.8 }}
+      viewport={{ once: true }}
+      className="bg-black p-8 md:pl-[8rem]"
+    >
+      <div>
+        <motion.h2
+          initial={{ x: -50, opacity: 0 }}
+          whileInView={{ x: 0, opacity: 1 }}
+          transition={{ duration: 0.6 }}
+          viewport={{ once: true }}
+          className="text-white text-3xl font-light mb-8"
+        >
+          Our Stories
+        </motion.h2>
+        <div></div>
+      </div>
       <Slider {...settings}>
         {cardData.map((card, index) => (
-          <div key={index} className="">
-            <div className=" overflow-hidden text-white max-w-[320px]">
+          <motion.div
+            key={index}
+            initial={{ opacity: 0, y: 30 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: index * 0.1 }}
+            viewport={{ once: true }}
+            className=""
+          >
+            <motion.div
+              whileHover={{ y: -10 }}
+              transition={{ type: "spring", stiffness: 300 }}
+              className="overflow-hidden text-white max-w-[320px]"
+            >
               <Image
-                src={card.imageUrl}
+                src={card.imageUrl || "/placeholder.svg"}
                 alt={card.title}
                 width={320}
                 height={330}
                 className="w-[320] h-[330px] object-cover"
               />
-              <div className="py-4  text-start">
+              <div className="py-4 text-start">
                 <h3 className="text-xl font-semibold">{card.title}</h3>
                 <p className="text-white mt-2">{card.description}</p>
               </div>
-            </div>
-          </div>
+            </motion.div>
+          </motion.div>
         ))}
       </Slider>
-    </div>
-  );
-};
-
-interface ArrowProps {
-    className?: string;
-    style?: React.CSSProperties;
-    onClick?: () => void;
+    </motion.div>
+  )
 }
 
-const SampleNextArrow = (props:ArrowProps) => {
-    const { className, style, onClick } = props;
-    return (
-        <div
-            className={`${className} bg-white !text-4xl rounded-full block  left-[75vw] md:left-[75vw] !top-[-70px] cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out p-2`}
-            style={{ ...style }}
-            onClick={onClick}
-        >
-            <span className="text-white">→</span>
-        </div>
-    );
-};
+interface ArrowProps {
+  className?: string
+  style?: React.CSSProperties
+  onClick?: () => void
+}
 
-const SamplePrevArrow = (props:ArrowProps) => {
-  const { className, style, onClick } = props;
+const SampleNextArrow = (props: ArrowProps) => {
+  const { className, style, onClick } = props
   return (
-    <div
-    className={`${className} bg-white !text-4xl rounded-full block !left-[65vw] md:!left-[70vw] !top-[-70px] cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out  p-2`}
-    style={{ ...style }}
+    <motion.div
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      className={`${className} bg-white !text-4xl rounded-full block left-[75vw] md:left-[75vw] !top-[-70px] cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out p-2`}
+      style={{ ...style }}
+      onClick={onClick}
+    >
+      <span className="text-white">→</span>
+    </motion.div>
+  )
+}
+
+const SamplePrevArrow = (props: ArrowProps) => {
+  const { className, style, onClick } = props
+  return (
+    <motion.div
+      whileHover={{ scale: 1.2 }}
+      whileTap={{ scale: 0.9 }}
+      className={`${className} bg-white !text-4xl rounded-full block !left-[65vw] md:!left-[70vw] !top-[-70px] cursor-pointer hover:scale-110 transition-all duration-300 ease-in-out p-2`}
+      style={{ ...style }}
       onClick={onClick}
     >
       <span className="text-white">←</span>
-    </div>
-  );
-};
+    </motion.div>
+  )
+}
 
