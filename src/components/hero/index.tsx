@@ -18,7 +18,6 @@ export const Hero = () => {
             delay: 0.6,
             duration: 0.6,
          
-            stiffness: 100,
           }}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.9 }}
